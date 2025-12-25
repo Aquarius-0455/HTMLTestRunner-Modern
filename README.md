@@ -22,11 +22,13 @@
 
 ## 🚀 安装
 
+### 方式 1：直接从 GitHub 安装（推荐）
+
 ```bash
-pip install htmltestrunner-modern
+pip install git+https://github.com/Aquarius-0455/HTMLTestRunner-Modern.git
 ```
 
-或者从源码安装：
+### 方式 2：克隆后本地安装
 
 ```bash
 git clone https://github.com/Aquarius-0455/HTMLTestRunner-Modern.git
