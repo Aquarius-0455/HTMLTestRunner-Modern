@@ -1,0 +1,117 @@
+# HTMLTestRunner Modern 🎨
+
+现代化的 Python unittest HTML 测试报告生成器
+
+[![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)](https://www.python.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+## ✨ 特性
+
+- 🎨 **Bootstrap 5 + ECharts 5** 现代 UI 设计
+- 🌓 **深色/浅色主题** 一键切换
+- 📱 **响应式设计** 完美支持移动端
+- 📊 **环形图表** 可视化展示通过率
+- 📋 **测试详情** 支持复制、展开/折叠
+- 🧪 **subTest 支持** 完整支持子测试用例
+- 🎯 **自定义配色** 支持自定义主题颜色
+- 📤 **JSON 导出** 支持导出结构化测试结果
+
+## 📸 预览
+
+![Report Preview](https://via.placeholder.com/800x400?text=Report+Preview)
+
+## 🚀 安装
+
+```bash
+pip install htmltestrunner-modern
+```
+
+或者从源码安装：
+
+```bash
+git clone https://github.com/yourusername/HTMLTestRunner-Modern.git
+cd HTMLTestRunner-Modern
+pip install -e .
+```
+
+## 📖 使用方法
+
+### 基础用法
+
+```python
+import unittest
+from htmltestrunner import HTMLTestRunner
+
+# 创建测试套件
+suite = unittest.TestLoader().loadTestsFromTestCase(YourTestCase)
+
+# 生成报告
+with open('report.html', 'wb') as f:
+    runner = HTMLTestRunner(
+        stream=f,
+        title='API 测试报告',
+        description='项目接口自动化测试',
+        tester='QA Team'
+    )
+    runner.run(suite)
+```
+
+### 自定义配置
+
+```python
+runner = HTMLTestRunner(
+    stream=f,
+    title='测试报告',
+    description='项目描述',
+    tester='测试人员',
+    verbosity=2,
+    open_in_browser=True  # 测试完成后自动打开报告
+)
+```
+
+## 🎨 主题配置
+
+支持深色和浅色两种主题，用户可以在报告中手动切换。
+
+## 📊 报告内容
+
+- **测试概览**: 总数、通过、失败、错误、跳过统计
+- **可视化图表**: 通过率环形图
+- **详细结果**: 每个测试用例的执行详情
+- **错误追踪**: 完整的错误堆栈信息
+- **执行时间**: 每个用例的执行耗时
+
+## 🔧 API 参考
+
+### HTMLTestRunner
+
+| 参数 | 类型 | 默认值 | 描述 |
+|------|------|--------|------|
+| stream | file | - | 输出文件流 |
+| title | str | "测试报告" | 报告标题 |
+| description | str | "" | 报告描述 |
+| tester | str | "QA" | 测试人员 |
+| verbosity | int | 1 | 详细程度 |
+| open_in_browser | bool | False | 是否自动打开 |
+
+## 📝 更新日志
+
+### v2.0.0
+- 全新 Bootstrap 5 UI
+- 添加 ECharts 图表支持
+- 深色/浅色主题切换
+- 响应式设计优化
+- subTest 支持
+
+## 📄 许可证
+
+本项目采用 [MIT](LICENSE) 许可证。
+
+## 🤝 贡献
+
+欢迎提交 Issue 和 Pull Request！
+
+## ⭐ Star History
+
+如果这个项目对你有帮助，请给一个 Star ⭐
+
