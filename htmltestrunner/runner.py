@@ -31,7 +31,7 @@ HTMLTestRunner Modern - 现代化的 Python 测试报告生成器
 
 📝 License: MIT
 👤 Author: Lit
-🔗 GitHub: https://github.com/Lit-CAO/htmltestrunner-modern
+🔗 GitHub: https://github.com/Aquarius-0455/HTMLTestRunner-Modern
 """
 
 __author__ = "Lit"

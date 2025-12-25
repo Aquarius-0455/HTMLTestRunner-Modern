@@ -29,7 +29,7 @@ classifiers = [
 keywords = ["unittest", "test", "testing", "report", "html", "htmltestrunner"]
 
 [project.urls]
-Homepage = "https://github.com/Lit-CAO/HTMLTestRunner-Modern"
-Repository = "https://github.com/Lit-CAO/HTMLTestRunner-Modern"
-Issues = "https://github.com/Lit-CAO/HTMLTestRunner-Modern/issues"
+Homepage = "https://github.com/Aquarius-0455/HTMLTestRunner-Modern"
+Repository = "https://github.com/Aquarius-0455/HTMLTestRunner-Modern"
+Issues = "https://github.com/Aquarius-0455/HTMLTestRunner-Modern/issues"
 

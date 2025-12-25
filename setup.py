@@ -12,7 +12,7 @@ setup(
     description="现代化的 Python unittest HTML 测试报告生成器",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/Lit-CAO/HTMLTestRunner-Modern",
+    url="https://github.com/Aquarius-0455/HTMLTestRunner-Modern",
     packages=find_packages(),
     classifiers=[
         "Development Status :: 5 - Production/Stable",
