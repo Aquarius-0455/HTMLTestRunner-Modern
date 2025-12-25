@@ -72,8 +72,9 @@ if __name__ == '__main__':
         runner = HTMLTestRunner(
             stream=f,
             title='HTMLTestRunner Modern 演示报告',
-            description='这是一个演示测试报告，展示 HTMLTestRunner Modern 的各种功能',
-            tester='Demo'
+            description='这是一个演示测试报告，展示 HTMLTestRunner 的各种功能',
+            tester='Lit',
+            open_in_browser=True  # 测试完成后自动打开报告
         )
         runner.run(suite)
     

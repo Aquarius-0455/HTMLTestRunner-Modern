@@ -23,7 +23,9 @@ Version 1.0.0
 import datetime
 import sys
 import io
+import os
 import time
+import webbrowser
 import unittest
 from xml.sax import saxutils
 
@@ -1093,7 +1095,7 @@ class Template_mixin(object):
             </p>
             <p class='text-muted mb-2' style='font-size: 0.875rem;'>
                 <i class="bi bi-person-circle"></i> 
-                Author: <strong>Linker QA</strong>
+                Author: <strong>Lit</strong>
             </p>
             <p class='text-muted mb-0' style='font-size: 0.875rem;'>
                 <i class="bi bi-calendar3"></i> 
@@ -1274,9 +1276,10 @@ class _TestResult(TestResult):
 
 class HTMLTestRunner(Template_mixin):
 
-    def __init__(self, stream=sys.stdout, verbosity=1, title=None, description=None):
+    def __init__(self, stream=sys.stdout, verbosity=1, title=None, description=None, tester=None, open_in_browser=False):
         self.stream = stream
         self.verbosity = verbosity
+        self.open_in_browser = open_in_browser
         if title is None:
             self.title = self.DEFAULT_TITLE
         else:
@@ -1285,6 +1288,10 @@ class HTMLTestRunner(Template_mixin):
             self.description = self.DEFAULT_DESCRIPTION
         else:
             self.description = description
+        if tester is None:
+            self.tester = "QA Team"
+        else:
+            self.tester = tester
 
         self.startTime = datetime.datetime.now()
 
@@ -1295,6 +1302,13 @@ class HTMLTestRunner(Template_mixin):
         self.stopTime = datetime.datetime.now()
         self.generateReport(test, result)
         print('\nTime 运行时长: %s' % (self.stopTime-self.startTime), file=sys.stderr)
+        
+        # 自动打开报告
+        if self.open_in_browser and hasattr(self.stream, 'name'):
+            report_path = os.path.abspath(self.stream.name)
+            webbrowser.open('file://' + report_path)
+            print('报告已在浏览器中打开: %s' % report_path, file=sys.stderr)
+        
         return result
 
     def sortResult(self, result_list):
@@ -1318,7 +1332,6 @@ class HTMLTestRunner(Template_mixin):
         """
         startTime = str(self.startTime)[:19]
         duration = str(self.stopTime - self.startTime)
-        tsname = "Linker QA"
         status = []
         if result.success_count: status.append(u'通过 %s' % result.success_count)
         if result.failure_count: status.append(u'失败 %s' % result.failure_count)
@@ -1332,7 +1345,7 @@ class HTMLTestRunner(Template_mixin):
             (u'开始时间', startTime),
             (u'运行时长', duration),
             (u'状态', status),
-            (u'测试人', tsname),
+            (u'测试人', self.tester),
         ]
 
     def generateReport(self, test, result):
