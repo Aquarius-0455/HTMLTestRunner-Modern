@@ -9,7 +9,7 @@ description = "现代化的 Python unittest HTML 测试报告生成器"
 readme = "README.md"
 license = {text = "MIT"}
 authors = [
-    {name = "Lit", email = "limin.cao@item.local"}
+    {name = "Lit", email = "clm24Kmagic@163.com"}
 ]
 requires-python = ">=3.7"
 classifiers = [
