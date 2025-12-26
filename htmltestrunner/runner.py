@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 __author__ = "Lit"
-__version__ = "1.0.2"
+__version__ = "1.0.1"
 
 """
 Version 1.0.0
@@ -456,7 +456,7 @@ class Template_mixin(object):
 
     STYLESHEET_TMPL = """
 <style type="text/css">
-    :root {
+:root {
         --primary-color: #1890ff;
         --success-color: #52c41a;
         --warning-color: #faad14;
@@ -464,33 +464,33 @@ class Template_mixin(object):
         --info-color: #13c2c2;
         --border-color: #d9d9d9;
         --text-color: #262626;
-        --text-secondary: #8c8c8c;
+    --text-secondary: #8c8c8c;
         --bg-color: #f0f2f5;
-    }
+}
 
-    [data-bs-theme="dark"] {
+[data-bs-theme="dark"] {
         --primary-color: #177ddc;
         --success-color: #49aa19;
         --warning-color: #d89614;
         --danger-color: #d32029;
         --border-color: #434343;
         --text-color: #e8e8e8;
-        --text-secondary: #a6a6a6;
+    --text-secondary: #a6a6a6;
         --bg-color: #141414;
-    }
+}
 
     * {
         box-sizing: border-box;
     }
 
-    body {
+body {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
         background: var(--bg-color);
-        min-height: 100vh;
-        padding: 24px;
-        margin: 0;
+    min-height: 100vh;
+    padding: 24px;
+    margin: 0;
         color: var(--text-color);
-    }
+}
 
     .container-fluid {
         max-width: 1400px;
@@ -501,7 +501,7 @@ class Template_mixin(object):
     .header-card {
         background: white;
         border-radius: 8px;
-        padding: 24px;
+    padding: 24px;
         margin-bottom: 16px;
         box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03), 0 1px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px 0 rgba(0, 0, 0, 0.02);
         border: 1px solid var(--border-color);
@@ -510,36 +510,36 @@ class Template_mixin(object):
     [data-bs-theme="dark"] .header-card {
         background: #1f1f1f;
         border-color: var(--border-color);
-    }
+}
 
-    .report-title {
+.report-title {
         font-size: 24px;
         font-weight: 600;
         color: var(--text-color);
         margin-bottom: 16px;
-        display: flex;
-        align-items: center;
+    display: flex;
+    align-items: center;
         gap: 8px;
-    }
-    
-    .report-title i {
-        color: var(--primary-color);
-    }
+}
 
-    .theme-toggle {
-        position: fixed;
-        top: 24px;
-        right: 24px;
-        z-index: 1000;
+.report-title i {
+        color: var(--primary-color);
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    z-index: 1000;
         background: white;
         border: 1px solid var(--border-color);
         border-radius: 6px;
         width: 36px;
         height: 36px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
         transition: all 0.2s;
         color: var(--text-color);
@@ -548,25 +548,25 @@ class Template_mixin(object):
     [data-bs-theme="dark"] .theme-toggle {
         background: #1f1f1f;
         border-color: var(--border-color);
-    }
+}
 
-    .theme-toggle:hover {
+.theme-toggle:hover {
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
         border-color: var(--primary-color);
-    }
+}
 
     /* 统计卡片 */
-    .stats-grid {
-        display: grid;
+.stats-grid {
+    display: grid;
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 16px;
+    gap: 16px;
         margin-bottom: 16px;
-    }
+}
 
-    .stat-card {
+.stat-card {
         background: white;
         border-radius: 8px;
-        padding: 20px;
+    padding: 20px;
         box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03), 0 1px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px 0 rgba(0, 0, 0, 0.02);
         border: 1px solid var(--border-color);
         transition: all 0.2s;
@@ -577,29 +577,29 @@ class Template_mixin(object):
         border-color: var(--border-color);
     }
 
-    .stat-card:hover {
+.stat-card:hover {
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         border-color: var(--primary-color);
-    }
+}
 
     .stat-card.info .stat-icon { color: var(--info-color); }
     .stat-card.primary .stat-icon { color: var(--primary-color); }
     .stat-card.success .stat-icon { color: var(--success-color); }
     .stat-card.secondary .stat-icon { color: var(--text-secondary); }
 
-    .stat-label {
-        font-size: 14px;
-        color: var(--text-secondary);
-        margin-bottom: 8px;
-    }
+.stat-label {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
 
-    .stat-value {
+.stat-value {
         font-size: 24px;
         font-weight: 600;
         color: var(--text-color);
-    }
+}
 
-    .stat-icon {
+.stat-icon {
         font-size: 20px;
         float: right;
         opacity: 0.8;
@@ -638,7 +638,7 @@ class Template_mixin(object):
     [data-bs-theme="dark"] .filter-btn {
         background: #1f1f1f;
         border-color: var(--border-color);
-    }
+}
 
     .filter-btn:hover {
         border-color: var(--primary-color);
@@ -652,14 +652,14 @@ class Template_mixin(object):
     }
 
     /* 表格样式 */
-    .table-card {
+.table-card {
         background: white;
         border-radius: 8px;
         padding: 24px;
         box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03), 0 1px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px 0 rgba(0, 0, 0, 0.02);
         border: 1px solid var(--border-color);
-        overflow: hidden;
-    }
+    overflow: hidden;
+}
 
     [data-bs-theme="dark"] .table-card {
         background: #1f1f1f;
@@ -672,44 +672,44 @@ class Template_mixin(object):
         color: var(--text-color);
     }
 
-    #result_table {
+#result_table {
         width: 100%%;
         margin-bottom: 0;
         border-collapse: collapse;
-    }
+}
 
-    #result_table thead th {
+#result_table thead th {
         background: #fafafa;
         color: var(--text-color);
-        font-weight: 600;
+    font-weight: 600;
         padding: 12px 16px;
-        font-size: 14px;
+    font-size: 14px;
         border-bottom: 1px solid var(--border-color);
-        text-align: left;
+    text-align: left;
     }
 
     [data-bs-theme="dark"] #result_table thead th {
         background: #141414;
-    }
+}
 
-    #result_table tbody tr {
+#result_table tbody tr {
         transition: background 0.2s;
         border-bottom: 1px solid var(--border-color);
-    }
+}
 
-    #result_table tbody tr:hover {
+#result_table tbody tr:hover {
         background-color: #fafafa;
     }
 
     [data-bs-theme="dark"] #result_table tbody tr:hover {
         background-color: #262626;
-    }
+}
 
-    #result_table td {
+#result_table td {
         padding: 12px 16px;
-        vertical-align: middle;
-        font-size: 14px;
-    }
+    vertical-align: middle;
+    font-size: 14px;
+}
 
     .passClass {
         background: #f6ffed;
@@ -758,15 +758,15 @@ class Template_mixin(object):
     .errorCase { color: var(--danger-color); }
     .skipCase { color: var(--primary-color); }
 
-    .testcase {
+.testcase {
         margin-left: 24px;
-        font-size: 14px;
+    font-size: 14px;
     }
 
     /* 详情弹窗 */
     .popup_link {
         display: inline-flex;
-        align-items: center;
+    align-items: center;
         gap: 4px;
         padding: 4px 12px;
         border-radius: 4px;
@@ -779,32 +779,32 @@ class Template_mixin(object):
         opacity: 0.8;
     }
 
-    .popup_window {
-        display: none;
-        margin-top: 12px;
+.popup_window {
+    display: none;
+    margin-top: 12px;
         background: #fafafa;
         border-radius: 6px;
         border: 1px solid var(--border-color);
         position: relative;
-    }
+}
 
     [data-bs-theme="dark"] .popup_window {
         background: #141414;
         border-color: var(--border-color);
-    }
+}
 
-    .popup_window_header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 12px 16px;
+.popup_window_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
         border-bottom: 1px solid var(--border-color);
-    }
+}
 
     .popup_window_header strong {
         font-size: 14px;
         color: var(--text-color);
-    }
+}
 
     .popup_window_actions {
         display: flex;
@@ -816,14 +816,14 @@ class Template_mixin(object):
         border: 1px solid var(--border-color);
         border-radius: 4px;
         padding: 4px 12px;
-        font-size: 13px;
-        cursor: pointer;
-        transition: all 0.2s;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
         color: var(--text-color);
         display: flex;
-        align-items: center;
+    align-items: center;
         gap: 4px;
-    }
+}
 
     [data-bs-theme="dark"] .popup_window_actions button {
         background: #1f1f1f;
@@ -832,7 +832,7 @@ class Template_mixin(object):
     .popup_window_actions button:hover {
         border-color: var(--primary-color);
         color: var(--primary-color);
-    }
+}
 
     .popup_window_content {
         max-height: 400px;
@@ -856,7 +856,7 @@ class Template_mixin(object):
     }
 
     /* 响应式设计 */
-    @media (max-width: 768px) {
+@media (max-width: 768px) {
         body {
             padding: 16px;
         }
@@ -888,7 +888,7 @@ class Template_mixin(object):
         border-radius: 4px;
         font-weight: 500;
         font-size: 12px;
-    }
+        }
 
     /* 滚动条美化 */
     ::-webkit-scrollbar {
@@ -903,7 +903,7 @@ class Template_mixin(object):
     ::-webkit-scrollbar-thumb {
         background: rgba(0, 0, 0, 0.2);
         border-radius: 4px;
-    }
+            }
 
     [data-bs-theme="dark"] ::-webkit-scrollbar-thumb {
         background: rgba(255, 255, 255, 0.2);
@@ -915,7 +915,7 @@ class Template_mixin(object):
 
     [data-bs-theme="dark"] ::-webkit-scrollbar-thumb:hover {
         background: rgba(255, 255, 255, 0.3);
-    }
+}
 </style>
 """
 
@@ -926,24 +926,24 @@ class Template_mixin(object):
     HEADING_TMPL = """
     <!-- 主题切换按钮 -->
     <button class="theme-toggle" onclick="toggleTheme()" title="切换主题">
-        <i class="bi bi-moon-stars-fill" id="theme-icon"></i>
-    </button>
-    
+    <i class="bi bi-moon-stars-fill" id="theme-icon"></i>
+</button>
+
     <!-- 头部卡片 -->
     <div class='header-card'>
         <h1 class='report-title'>
             <i class="bi bi-clipboard-check"></i>
-            %(title)s
-        </h1>
-        
+        %(title)s
+    </h1>
+    
         <!-- 统计卡片网格 -->
         <div class='stats-grid'>
             %(parameters)s
-        </div>
-        
-        <p class='description text-muted' style='font-size: 1.1rem; margin-top: 1.5rem;'>%(description)s</p>
     </div>
     
+        <p class='description text-muted' style='font-size: 1.1rem; margin-top: 1.5rem;'>%(description)s</p>
+</div>
+
     <!-- 图表卡片 -->
     <div class='chart-card'>
         <div id="chart" style="width:100%%;height:500px;"></div>
@@ -985,24 +985,24 @@ class Template_mixin(object):
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h2 class="mb-0">
                 <i class="bi bi-list-check"></i> 测试详情
-            </h2>
+        </h2>
             <div class="filter-buttons btn-group" role="group">
                 <button type="button" class="filter-btn active" onclick='showCase(0)'>
                     <i class="bi bi-clipboard-data"></i> 总结
-                </button>
+            </button>
                 <button type="button" class="filter-btn" onclick='showCase(1)'>
                     <i class="bi bi-exclamation-triangle"></i> 失败
-                </button>
+            </button>
                 <button type="button" class="filter-btn" onclick='showCase(2)'>
                     <i class="bi bi-list-ul"></i> 全部
-                </button>
-            </div>
+            </button>
         </div>
-        
-        <div class="table-responsive">
+    </div>
+    
+    <div class="table-responsive">
             <table id='result_table' class="table table-hover align-middle">
-                <thead>
-                    <tr>
+            <thead>
+                <tr>
                         <th style="min-width: 300px;"><i class="bi bi-folder2-open"></i> 测试套件/测试用例</th>
                         <th class="text-center" style="width: 100px;"><i class="bi bi-hash"></i> 总数</th>
                         <th class="text-center" style="width: 100px;"><i class="bi bi-check-circle"></i> 通过</th>
@@ -1010,18 +1010,18 @@ class Template_mixin(object):
                         <th class="text-center" style="width: 100px;"><i class="bi bi-exclamation-circle"></i> 错误</th>
                         <th class="text-center" style="width: 100px;"><i class="bi bi-dash-circle"></i> 跳过</th>
                         <th class="text-center" style="width: 120px;"><i class="bi bi-eye"></i> 查看</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    %(test_list)s
+                </tr>
+            </thead>
+            <tbody>
+                %(test_list)s
                     <tr id='total_row'>
                         <td><strong><i class="bi bi-calculator"></i> 总计</strong></td>
-                        <td class="text-center"><strong>%(count)s</strong></td>
+    <td class="text-center"><strong>%(count)s</strong></td>
                         <td class="text-center"><span class="badge bg-success">%(Pass)s</span></td>
-                        <td class="text-center"><span class="badge bg-warning">%(fail)s</span></td>
-                        <td class="text-center"><span class="badge bg-danger">%(error)s</span></td>
-                        <td class="text-center"><span class="badge bg-primary">%(skip)s</span></td>
-                        <td>&nbsp;</td>
+    <td class="text-center"><span class="badge bg-warning">%(fail)s</span></td>
+    <td class="text-center"><span class="badge bg-danger">%(error)s</span></td>
+    <td class="text-center"><span class="badge bg-primary">%(skip)s</span></td>
+    <td>&nbsp;</td>
                     </tr>
                 </tbody>
             </table>
@@ -1034,16 +1034,16 @@ class Template_mixin(object):
         <td>
             <strong><i class="bi bi-folder-fill"></i> %(desc)s</strong>
         </td>
-        <td class="text-center">%(count)s</td>
+    <td class="text-center">%(count)s</td>
         <td class="text-center"><span class="badge bg-success">%(Pass)s</span></td>
-        <td class="text-center"><span class="badge bg-warning">%(fail)s</span></td>
-        <td class="text-center"><span class="badge bg-danger">%(error)s</span></td>
-        <td class="text-center"><span class="badge bg-primary">%(skip)s</span></td>
-        <td class="text-center">
+    <td class="text-center"><span class="badge bg-warning">%(fail)s</span></td>
+    <td class="text-center"><span class="badge bg-danger">%(error)s</span></td>
+    <td class="text-center"><span class="badge bg-primary">%(skip)s</span></td>
+    <td class="text-center">
             <a href="javascript:showClassDetail('%(cid)s',%(count)s)" class="btn btn-sm btn-outline-primary">
                 <i class="bi bi-chevron-down"></i> 详情
             </a>
-        </td>
+    </td>
     </tr>
 """  # variables: (style, desc, count, Pass, fail, error, skip, cid)
 
@@ -1090,21 +1090,21 @@ class Template_mixin(object):
     <div id='ending' class='text-center py-5'>
         <div class='card' style='background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-radius: 15px; padding: 2rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);'>
             <p class='text-muted mb-2'>
-                <i class="bi bi-code-square"></i> 
+        <i class="bi bi-code-square"></i>
                 Powered by <strong>HTMLTestRunner</strong> v1.0.0 - Modern UI Edition
-            </p>
+    </p>
             <p class='text-muted mb-2' style='font-size: 0.875rem;'>
-                <i class="bi bi-person-circle"></i> 
+        <i class="bi bi-person-circle"></i>
                 Author: <strong>Lit</strong>
-            </p>
+    </p>
             <p class='text-muted mb-0' style='font-size: 0.875rem;'>
-                <i class="bi bi-calendar3"></i> 
+        <i class="bi bi-calendar3"></i>
                 Generated on <span id='generation-time'></span>
-            </p>
+    </p>
         </div>
     </div>
-    
-    <script>
+
+<script>
     // 显示生成时间
     document.getElementById('generation-time').textContent = new Date().toLocaleString('zh-CN', {
         year: 'numeric',
@@ -1126,7 +1126,7 @@ TestResult = unittest.TestResult
 class _TestResult(TestResult):
     # note: _TestResult is a pure representation of results.
     # It lacks the output and reporting ability compares to unittest._TextTestResult.
-
+    
     def __init__(self, verbosity=1):
         TestResult.__init__(self)
         self.stdout0 = None
@@ -1257,7 +1257,7 @@ class _TestResult(TestResult):
                     sys.stderr.write('E  ')
                     sys.stderr.write(str(subtest))
                     sys.stderr.write('\n')
-                else:
+        else:
                     sys.stderr.write('E')
             self._mirrorOutput = True
         else:
@@ -1266,11 +1266,11 @@ class _TestResult(TestResult):
             self.success_count += 1
             output = self.complete_output()
             self.result.append((0, test, output + '\nSubTestCase Pass:\n' + str(subtest), ''))
-            if self.verbosity > 1:
+        if self.verbosity > 1:
                 sys.stderr.write('ok ')
                 sys.stderr.write(str(subtest))
                 sys.stderr.write('\n')
-            else:
+        else:
                 sys.stderr.write('../HTTP_TestRunner')
 
 
@@ -1287,14 +1287,14 @@ class HTMLTestRunner(Template_mixin):
         if description is None:
             self.description = self.DEFAULT_DESCRIPTION
         else:
-            self.description = description
+        self.description = description
         if tester is None:
             self.tester = "QA Team"
         else:
-            self.tester = tester
+        self.tester = tester
 
         self.startTime = datetime.datetime.now()
-
+        
     def run(self, test):
         "Run the given test case or test suite."
         result = _TestResult(self.verbosity)
@@ -1407,7 +1407,7 @@ class HTMLTestRunner(Template_mixin):
                 elif n == 1: nf += 1
                 elif n == 2: ne += 1
                 else: ns += 1
-
+            
             # format class description
             if cls.__module__ == "__main__":
                 name = cls.__name__
