@@ -8,7 +8,6 @@ setup(
     name="htmltestrunner-lit",
     version="1.0.2",
     author="Lit",
-    author_email="clm24Kmagic@163.com",
     description="现代化的 Python unittest HTML 测试报告生成器",
     long_description=long_description,
     long_description_content_type="text/markdown",
